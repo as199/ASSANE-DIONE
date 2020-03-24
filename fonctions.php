@@ -31,7 +31,7 @@
 
   // function affichage N
 
-  function affichertab($nb1,$tab){//KOUY WEUR NANDITE BA GUISS LA BOU  YABO MOU DIAPP LA;
+  function affichertab($nb1,$tab){
     echo "<table border=1>";
     $test=0;
     
