@@ -9,14 +9,13 @@
     <?php
   
       session_start();
-      set_time_limit(0); //Ca permet de faire quoi? oKay si je le mets a zero donc y'aura pas de d
-      // de delai d'attente donc ça execute la requete jusqu"a la fin NANDIT2 NGA
+      set_time_limit(0); //Cela permet de gerer le temps d'execution
       include('fonctions.php');
      ?>
      <div id="centrer">
           <div id="formulaire">
           <form action="" method="post">
-          <!-- <img src="/serie" alt=""> -->
+         
             <h1 >Entrer un nombre superieur à 10000</h1>
             
               
