@@ -14,23 +14,23 @@
                 <div class="container2">
                 <div class="col">
                 <label>Nom</label><br/>
-                <input class="pr" type="text" name="nom" placeholder="Votre nom " value="<?php if(!empty($_POST['nom'])){echo $_POST['nom'];} ?>" required>
+                <input class="pr" type="text" name="nom" placeholder="Votre nom " value="<?php if(!empty($_POST['nom'])){echo $n;} ?>" required>
             </div>
             <div class="col">
                 <label>Prenom</label><br/>
-                <input class="pr" type="text" name="prenom" placeholder="Votre prenom "value="<?php if(!empty($_POST['prenom'])){echo $_POST['prenom'];} ?>" required>
+                <input class="pr" type="text" name="prenom" placeholder="Votre prenom "value="<?php if(!empty($_POST['prenom'])){echo $p;} ?>" required>
             </div>
             <div class="col">
                 <label>Adresse</label><br/>
-                <input class="pr" type="text" name="adresse" placeholder="Votre Adresse *"value="<?php if(!empty($_POST['adresse'])){echo $_POST['adresse'];} ?>" required>
+                <input class="pr" type="text" name="adresse" placeholder="Votre Adresse *"value="<?php if(!empty($_POST['adresse'])){echo $a;} ?>" required>
             </div>
             <div class="col">
                 <label>Numéro</label><br/>
-                <input class="pr" type="number" name="numero" placeholder="Votre Numéro *"value="<?php if(!empty($_POST['numero'])){echo $_POST['numero'];} ?>" required>
+                <input class="pr" type="number" name="numero" placeholder="Votre Numéro *"value="<?php if(!empty($_POST['numero'])){echo $t;} ?>" required>
             </div>
             <div class="col">
                 <label>Confirmation Numéro</label><br/>
-                <input class="pr" type="number" name="cfnumero" placeholder="Votre Numéro *" value="<?php if(!empty($_POST['cfnumero'])){echo $_POST['cfnumero'];} ?>" required>
+                <input class="pr" type="number" name="cfnumero" placeholder="Votre Numéro *" value="<?php if(!empty($_POST['cfnumero'])){echo $cf;} ?>" required>
             </div>
             <div class="col">
                  <label>Genre</label><br/>
@@ -79,7 +79,7 @@
             </div>
             <div class="colzonec">
                 <label>Zone de Commentaire</label><br/>
-                <textarea class="pr2" type="text"cols="40" rows="10" name="commentaire" placeholder="Votre commentaire *" required></textarea>
+                <textarea class="pr2" type="text"cols="40" rows="10" name="commentaire" placeholder="Votre commentaire *"value="<?php if(!empty($_POST['commentaire'])){echo $co;} ?>" required></textarea>
             </div>
             
             
@@ -136,6 +136,12 @@
                 $commentaire=CorrigePhrases($_POST['commentaire']);
                 if(empty($nom)||empty($prenom)||empty($adresse)||empty($numero)||empty($cnumero)||empty($genre)||empty($genre)||empty($satisfait)||empty($langue)||empty($commentaire)){
                     echo "bakhulllllllll!!!!!!!!!!!!!!!!!!";
+                    $n=$_POST['nom'];
+                    $p=$_POST['prenom'];
+                    $a=$_POST['adresse'];
+                    $t=$_POST['numero'];
+                    $ct=$_POST['cfnumero'];
+                    $co=$_POST['commentaire'];
                 }
                 else
                 {
