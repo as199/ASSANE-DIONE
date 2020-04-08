@@ -1,7 +1,16 @@
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <?php
+    $n="";
+                 $p="";
+                  $a="";
+                   $t="";
+                    $ct="";
+                     $co="";
+    ?>
+
     <title></title>
     <link rel="stylesheet" type="text/css" href="messages.css">
 </head>
@@ -133,6 +142,7 @@
                 $genre=$_POST['genre'];
                 $satisfait=$_POST['satisfait'];
                 $langue=$meslangue;
+                
                 $commentaire=CorrigePhrases($_POST['commentaire']);
                 if(empty($nom)||empty($prenom)||empty($adresse)||empty($numero)||empty($cnumero)||empty($genre)||empty($genre)||empty($satisfait)||empty($langue)||empty($commentaire)){
                     echo "bakhulllllllll!!!!!!!!!!!!!!!!!!";
@@ -144,7 +154,12 @@
                     $co=$_POST['commentaire'];
                 }
                 else
-                {
+                {$n="";
+                 $p="";
+                  $a="";
+                   $t="";
+                    $ct="";
+                     $co="";
                     if (verifNumeroIdentique($numero,$numero)) {
 
                        $message['prenom']=$prenom;
